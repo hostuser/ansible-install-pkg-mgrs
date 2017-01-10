@@ -1,0 +1,13 @@
+- hosts: all
+  roles:
+    - ansible-nix-single
+
+- hosts: all
+  tasks:
+
+    - name: install nix packages
+      nix: name={{ item }} state=present
+      with_items:
+        - rofi
+        - rofi-pass
+

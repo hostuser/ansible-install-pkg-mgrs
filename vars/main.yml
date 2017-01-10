@@ -1,0 +1,3 @@
+---
+# vars file for ansible-nix-single
+ssl_cert_file: /etc/ssl/certs/ca-certificates.crt

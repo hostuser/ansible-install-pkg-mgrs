@@ -1,0 +1,8 @@
+---
+# defaults file for ansible-nix-single
+
+nix_install_type: standard  # can be standard or proot (the latter does not require root)
+
+nix_user: "{{ ansible_env.USER }}"
+nix_group: "{{ ansible_env.USER }}"
+nix_user_home: "{{ ansible_env.HOME }}"
