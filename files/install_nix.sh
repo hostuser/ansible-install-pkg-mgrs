@@ -2,6 +2,10 @@
 
 TEMP_DIR=/tmp/freckles_install
 
+function command_exists {
+    type "$1" > /dev/null 2>&1 ;
+}
+
 function download {
     if command_exists wget; then
         wget -O $2 $1
