@@ -5,7 +5,6 @@ PROOT_DIR="$BASE_DIR/opt/proot"
 NIX_DIR="$BASE_DIR/opt/nix"
 NIX_VERSION="1.11.5-x86_64-linux"
 NIX_ROOT="$NIX_DIR/root"
-
 NIX_BINARY_URL="https://nixos.org/releases/nix/latest/nix-$NIX_VERSION.tar.bz2"
 
 mkdir -p "$PROOT_DIR"
