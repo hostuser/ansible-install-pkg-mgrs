@@ -24,3 +24,4 @@
   args:
     creates: "{{ nix_user_home  }}/.nix-profile/bin/nix-env"
   become: no
+
