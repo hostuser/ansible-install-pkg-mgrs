@@ -3,6 +3,15 @@
 
 nix_install_type: standard  # can be standard or proot (the latter does not require root)
 
-nix_user: "{{ ansible_env.USER }}"
-nix_group: "{{ ansible_env.USER }}"
-nix_user_home: "{{ ansible_env.HOME }}"
+freckles_user: "{{ ansible_env.USER }}"
+freckles_group: "{{ ansible_env.USER }}"
+freckles_user_home: "{{ ansible_env.HOME }}"
+
+pkg_mgrs:
+  - "default"
+
+# using conda rel path in home dir to be able to use $HOME in .profile PATH=.. lineinfile directive
+conda_rel_path: ".freckles/opt"
+conda_parent_dir: "{{ ansible_env.HOME }}/{{ conda_rel_path }}"
+
+add_conda_path_to_profile: False
